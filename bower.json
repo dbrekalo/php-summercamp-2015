@@ -1,0 +1,29 @@
+{
+  "name": "phpsummercamp-2015-frontend",
+  "version": "1.0.0",
+  "authors": [
+    "Damir Brekalo <damir.brekalo@trikoder.net>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "jquery#2",
+    "simpleloader": "~0",
+    "repository": "~1",
+    "fastsearch": "~1",
+    "bourbon": "~4",
+    "normalize-css": "~3.0.1",
+    "swipejs": "32c19c95ea09092167cd07cc783da24f79f5adf6",
+    "whenInViewport": "~1",
+    "lateImages": "~1",
+    "swipeSlider": "~1",
+    "simple-view": "~1"
+  }
+}

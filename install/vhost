@@ -1,0 +1,29 @@
+<VirtualHost *:80>
+    ServerName frontend.phpsc
+    DocumentRoot /var/www/summercamp/workshops/frontend/web
+    DirectoryIndex app.php
+
+    # Enabled for Dev environment
+    # LogLevel debug
+
+    <Directory /var/www/summercamp/workshops/frontend/web>
+        Options FollowSymLinks
+        AllowOverride None
+        Require all granted
+    </Directory>
+
+    <IfModule mod_php5.c>
+        php_admin_flag safe_mode Off
+        php_admin_value register_globals    0
+        php_value magic_quotes_gpc  0
+        php_value magic_quotes_runtime  0
+        php_value allow_call_time_pass_reference 0
+	php_value max_execution_time 180
+    </IfModule>
+
+    # Environment.
+    # Possible values: "prod" and "dev" out-of-the-box, other values possible with proper configuration
+    # Defaults to "prod" if omitted (uses SetEnvIf so value can be used in rewrite rules)
+    SetEnvIf Request_URI ".*" ENVIRONMENT=dev
+
+</VirtualHost>
