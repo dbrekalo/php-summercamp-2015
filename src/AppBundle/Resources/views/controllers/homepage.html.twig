@@ -79,19 +79,31 @@
 
 	<div class="sideCol">
 
-		<a href="#" class="bannerType1">
-			<img src="frontDist/images/bannerType1.png" alt="">
-		</a>
-
-		<section class="orderedListType1">
-			<h3 class="title">One list to rule them all</h3>
+		<section class="listModuleType1">
+			<h3 class="titleType1">One list to rule them all</h3>
 			<ol>
-				<li><span>I am first item</span></li>
-				<li><span>I am second one</span></li>
-				<li><span>I come after second one</span></li>
-				<li><span>I follow third</span></li>
-				<li><span>I come last</span></li>
+				<li>First! OMG!</li>
+				<li>is sequel</li>
+				<li>all for one</li>
+				<li>I am number</li>
+				<li>is the element</li>
+				<li>is the big hero</li>
+				<li>Lucky number</li>
+				<li>is super</li>
+				<li>in deep space</li>
+				<li>comes from 1979</li>
 			</ol>
+			<a href="#" class="btnType1"><span>view more</span></a>
+		</section>
+
+		<section class="galleryModuleType1">
+			<h3 class="titleType1">Picture gallery</h3>
+			<ul class="cf">
+				{% for i in 1..9 %}
+				<li><a href="{{ asset('bundles/app/images/gallery/galleryLarge1.jpg') }}"><img src="{{ asset('bundles/app/images/gallery/gallerySmall1.jpg') }}" alt="Image 1" /></a></li>
+				{% endfor %}
+			</ul>
+			<a href="#" class="btnType1"><span>view more</span></a>
 		</section>
 
 	</div>

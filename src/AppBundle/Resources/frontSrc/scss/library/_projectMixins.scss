@@ -7,3 +7,25 @@
   @return '/bundles/app/' + $path;
 }
 
+@mixin btnType1 {
+
+	text-align: right; display: block; overflow: hidden;
+
+	> span {
+
+		font-size: 1.4em; display: inline-block; position: relative; padding: em(7,14) 0;
+		@include fontSansBold; color: $colorMain1;
+
+		&:before {
+
+			content: ""; position: absolute; right: 100%; margin-right: em(10,14); width: 100em; top: 50%;
+			border-top: 1px solid $colorGrayLight1;
+
+		}
+
+	}
+
+	&:hover > span { color: $colorGrayDark1; }
+
+}
+

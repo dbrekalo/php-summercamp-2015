@@ -17,7 +17,7 @@
 
 		position: absolute; left: 0; top: 0; bottom: 0; width: 16em; height: auto;
 		@include transition(margin-top 0.2s);
-		&:before { color: #fff; font-size: 8em; width: 1em; margin-left: -0.5em; }
+		&:before { color: #fff; font-size: 9em; width: 1em; margin-left: -0.5em; }
 
 
 		&:hover { margin-top: -0.5em; }

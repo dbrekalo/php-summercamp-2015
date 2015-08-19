@@ -1,6 +1,6 @@
 .mainSearch {
 
-	position: absolute; right: 4em; top: 2em; width: 40%;
+	position: absolute; right: 4em; top: 2.7em; width: 40%;
 
 	.query {
 
@@ -9,7 +9,7 @@
 
 		@include fontSansLight;
 		@include appearance(none);
-		@include placeholder { opacity: 1; }
+		@include placeholder { opacity: 1; color: #fff; }
 
 	}
 

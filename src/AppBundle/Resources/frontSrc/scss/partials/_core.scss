@@ -22,14 +22,17 @@ body {
 .cf { @include clearfix; }
 .nBtn { @include normalizeButton; }
 .icr { @include iconReplacement(40); }
+.btnType1 { @include btnType1(); }
 
 .mainContentArea {
 
 	$gutter: 30; $sidebarSize: 300;
 
+	padding: em($gutter,10);
+
 	> .mainCol {
 
-		float: left; width: 100%; padding: em($gutter,10) em($gutter + $sidebarSize,10) em($gutter,10) em($gutter,10); box-sizing: border-box;
+		float: left; width: 100%; padding-right: em($gutter + $sidebarSize,10); box-sizing: border-box;
 
 	}
 

@@ -4,6 +4,9 @@
 @import '../partials/articleType1';
 @import '../partials/articleType2';
 
+@import '../partials/listModuleType1';
+@import '../partials/galleryModuleType1';
+
 .sliderType1 {
 
 	> ul > li { display: none; &:first-child { display: block; } }
@@ -19,4 +22,6 @@
 	}
 
 }
+
+.listModuleType1 { margin-bottom: 3em; }
 
