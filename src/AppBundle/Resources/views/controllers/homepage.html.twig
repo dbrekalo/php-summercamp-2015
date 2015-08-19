@@ -1,11 +1,18 @@
-{% extends noLayout ? "layouts/noLayout.html.twig" : "layouts/main.html.twig" %}
+{% extends (noLayout is defined and noLayout == true) ? "AppBundle:layouts:noLayout.html.twig" : "AppBundle:layouts:main.html.twig" %}
 
-{% block stylesheets %}
-	<link href="{{ asset('bundles/app/css/controllers/homepage.css') }}" rel="stylesheet" type="text/css" media="screen" />
+{% block stylesheets %}{% stylesheets
+	'bundles/app/css/controllers/homepage.css'
+%}
+    <link href="{{ asset_url }}" rel="stylesheet" type="text/css" />
+    {% endstylesheets %}
 {% endblock %}
 
 {% block javascripts %}
-	<script async src="{{ asset('bundles/app/js/builds/homepage.js') }}"></script>
+    {% javascripts
+        'bundles/app/js/builds/homepage.js'
+    %}
+    <script async src="{{ asset_url }}"></script>
+    {% endjavascripts %}
 {% endblock %}
 
 {% block body %}

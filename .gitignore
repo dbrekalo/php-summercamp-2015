@@ -13,3 +13,5 @@
 /src/AppBundle/Resources/public/vendor/
 /node_modules
 /.sass-cache
+/web/js
+/web/css
