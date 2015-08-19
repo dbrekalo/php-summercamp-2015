@@ -1,0 +1,23 @@
+.mainNav {
+
+	position: relative; background-color: #fff; border-bottom: 2px solid $colorGrayLight1;
+
+	li { float: left; }
+
+	a {
+
+		display: block; font-size: 1.8em; padding: em(20,18) em(20,18);
+		text-transform: uppercase; color: $colorGrayDark2; @include transition(color 0.3s);
+
+		&:hover { color: $colorMain1; }
+
+	}
+
+	.signIn {
+
+		float: right; padding-left: em(45,18);
+		&:before { font-size: 1.4em; color: $colorMain1; }
+
+	}
+
+}

@@ -18,6 +18,23 @@ module.exports = function(grunt) {
 			}
 		},
 
+		sass: {
+			front: {
+				files: [{
+					expand: true,
+					cwd:'<%= settings.frontSrcPath %>/scss',
+					src: ['**/*.scss'],
+					dest: '<%= settings.frontDistPath %>/css',
+					ext: '.css'
+				}],
+				options: {
+					style: 'compressed',
+					sourcemap: 'none',
+					update: grunt.option('compileAll') ? false : true
+				}
+			}
+		},
+
 		jshint: {
 			options: {
 				jshintrc: '.jshintrc'
@@ -74,6 +91,13 @@ module.exports = function(grunt) {
 					spawn: false
 				}
 			},
+			cssFiles: {
+				files: ['<%= settings.frontSrcPath %>/scss/**/*.scss'],
+				tasks: ['sass'],
+				options: {
+					spawn: false
+				}
+			},
 			frontImages: {
 				files: ['<%= settings.frontSrcPath %>images/**/*.{png,jpg,gif}'],
 				tasks: ['imagemin'],
@@ -110,7 +134,7 @@ module.exports = function(grunt) {
 			options: {
 				logConcurrentOutput: true
 			},
-			front: ['shell:watchSass', 'watch']
+			front: ['watch']
 		}
 
 	});
@@ -118,6 +142,6 @@ module.exports = function(grunt) {
 	require('load-grunt-tasks')(grunt);
 
 	grunt.registerTask('default', ['concurrent']);
-	grunt.registerTask('build', ['shell:updateSass', 'jshint', 'jscs', 'uglify', 'concat', 'imagemin']);
+	grunt.registerTask('build', ['sass', 'jshint', 'jscs', 'uglify', 'concat', 'imagemin']);
 
 };

@@ -1,0 +1,30 @@
+html,
+body { min-height: 100%; }
+
+html {
+
+	font-size: 62.5%; background: #F4F4F4; @include fontSansNormal;
+
+}
+
+body {
+
+	font-size: 1em; min-width: 32em; position: relative;
+
+}
+
+.fitWrap {
+
+	max-width: 128em; margin: 0 auto; position: relative; padding: 0 2em;
+
+}
+
+.cf { @include clearfix; }
+.nBtn { @include normalizeButton; }
+.icr { @include iconReplacement(40); }
+
+.mainCol, .sideCol {
+
+	display: none;
+
+}
