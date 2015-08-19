@@ -15,7 +15,7 @@ body {
 
 .fitWrap {
 
-	max-width: 128em; margin: 0 auto; position: relative; padding: 0 2em;
+	max-width: 120em; margin: 0 auto; position: relative; box-sizing: border-box;
 
 }
 
@@ -23,8 +23,20 @@ body {
 .nBtn { @include normalizeButton; }
 .icr { @include iconReplacement(40); }
 
-.mainCol, .sideCol {
+.mainContentArea {
 
-	display: none;
+	$gutter: 30; $sidebarSize: 300;
+
+	> .mainCol {
+
+		float: left; width: 100%; padding: em($gutter,10) em($gutter + $sidebarSize,10) em($gutter,10) em($gutter,10); box-sizing: border-box;
+
+	}
+
+	> .sideCol {
+
+		float: left; width: em($sidebarSize,10); margin-left: em(-1*$sidebarSize,10);
+
+	}
 
 }

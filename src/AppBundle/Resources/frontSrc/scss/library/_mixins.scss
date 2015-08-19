@@ -37,7 +37,7 @@ Image container defined with ratio
 
     overflow: hidden; padding-bottom: percentage(1/$ratio);
 
-    img { position: absolute; left: 0; top: 0; width: 100%; height: auto; }
+    > img { position: absolute; left: 0; top: 0; width: 100%; height: auto; }
 
 }
 

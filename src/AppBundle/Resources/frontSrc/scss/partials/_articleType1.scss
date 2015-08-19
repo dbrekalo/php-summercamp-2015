@@ -1,0 +1,16 @@
+.articleType1 {
+
+	display: block; position: relative; @include imgRatio(9/5);
+	border-radius: 0.4em;
+
+	> .title {
+
+		font-size: 3.8em; position: absolute; left: 0; right: 0; bottom: 0; padding: em(20,38);
+		@include fontSansBold; background-color: rgba($colorMain1, 0.9); color: #fff;
+		@include transition(background-color 0.3s);
+
+	}
+
+	&:hover .title { background-color: rgba($colorMain1, 0.8); }
+
+}
