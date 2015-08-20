@@ -1,0 +1,33 @@
+.articleType3 {
+
+	display: block; position: relative; padding-left: 35%;
+
+	> .imageCont {
+
+		position: absolute; left: 0; top: 0; width: 30%;
+
+		> img { display: block; width: 100%; }
+
+	}
+
+	> .title {
+
+		font-size: 1.6em; position: relative; padding-bottom: em(8,16); margin-bottom: em(8,16);
+		@include fontSansBold; color: $colorGrayDark1;
+
+		&:after {
+
+			content: ""; position: absolute; left: 0; bottom: 0; width: em(20,16);
+			border-bottom: 1px solid $colorGrayLight1;
+
+		}
+
+	}
+
+	> .text {
+
+		font-size: 1.3em; line-height: 1.4; color: $colorGrayDark2;
+
+	}
+
+}

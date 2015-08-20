@@ -40,7 +40,7 @@
 	</nav>
 </header>
 
-<div class="mainContentArea fitWrap cf">
+<div class="mainContentArea homepageLayout fitWrap cf">
 	<div class="mainCol">
 
 		<div class="sliderType1">
@@ -99,8 +99,35 @@
 		<section class="galleryModuleType1">
 			<h3 class="titleType1">Picture gallery</h3>
 			<ul class="cf">
-				{% for i in 1..9 %}
 				<li><a href="{{ asset('bundles/app/images/gallery/galleryLarge1.jpg') }}"><img src="{{ asset('bundles/app/images/gallery/gallerySmall1.jpg') }}" alt="Image 1" /></a></li>
+				<li><a href="{{ asset('bundles/app/images/gallery/galleryLarge2.jpg') }}"><img src="{{ asset('bundles/app/images/gallery/gallerySmall2.jpg') }}" alt="Image 1" /></a></li>
+				<li><a href="{{ asset('bundles/app/images/gallery/galleryLarge3.jpg') }}"><img src="{{ asset('bundles/app/images/gallery/gallerySmall3.jpg') }}" alt="Image 1" /></a></li>
+				<li><a href="{{ asset('bundles/app/images/gallery/galleryLarge4.jpg') }}"><img src="{{ asset('bundles/app/images/gallery/gallerySmall4.jpg') }}" alt="Image 1" /></a></li>
+				<li><a href="{{ asset('bundles/app/images/gallery/galleryLarge5.jpg') }}"><img src="{{ asset('bundles/app/images/gallery/gallerySmall5.jpg') }}" alt="Image 1" /></a></li>
+				<li><a href="{{ asset('bundles/app/images/gallery/galleryLarge6.jpg') }}"><img src="{{ asset('bundles/app/images/gallery/gallerySmall6.jpg') }}" alt="Image 1" /></a></li>
+				<li><a href="{{ asset('bundles/app/images/gallery/galleryLarge7.jpg') }}"><img src="{{ asset('bundles/app/images/gallery/gallerySmall7.jpg') }}" alt="Image 1" /></a></li>
+				<li><a href="{{ asset('bundles/app/images/gallery/galleryLarge8.jpg') }}"><img src="{{ asset('bundles/app/images/gallery/gallerySmall8.jpg') }}" alt="Image 1" /></a></li>
+				<li><a href="{{ asset('bundles/app/images/gallery/galleryLarge9.jpg') }}"><img src="{{ asset('bundles/app/images/gallery/gallerySmall9.jpg') }}" alt="Image 1" /></a></li>
+				<li><a href="{{ asset('bundles/app/images/gallery/galleryLarge10.jpg') }}"><img src="{{ asset('bundles/app/images/gallery/gallerySmall10.jpg') }}" alt="Image 1" /></a></li>
+				<li><a href="{{ asset('bundles/app/images/gallery/galleryLarge10.jpg') }}"><img src="{{ asset('bundles/app/images/gallery/gallerySmall11.jpg') }}" alt="Image 1" /></a></li>
+				<li><a href="{{ asset('bundles/app/images/gallery/galleryLarge10.jpg') }}"><img src="{{ asset('bundles/app/images/gallery/gallerySmall12.jpg') }}" alt="Image 1" /></a></li>
+			</ul>
+			<a href="#" class="btnType1"><span>view more</span></a>
+		</section>
+
+		<section class="listModuleType2">
+			<h3 class="titleType1">Featured articles</h3>
+			<ul>
+				{% for i in 1..5 %}
+				<li>
+					<a href="#" class="articleType3">
+						<div class="imageCont">
+							<img src="{{ asset('bundles/app/images/gallery/gallerySmall3.jpg') }}" alt="">
+						</div>
+						<h3 class="title">Item title</h3>
+						<p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+					</a>
+				</li>
 				{% endfor %}
 			</ul>
 			<a href="#" class="btnType1"><span>view more</span></a>
@@ -118,6 +145,5 @@
 		<p class="copyRight">Copyright &copy; 2015 Trikoder</p>
 	</div>
 </footer>
-
 
 {% endblock %}
