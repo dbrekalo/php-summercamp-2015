@@ -1,7 +1,7 @@
 .galleryModuleType1 {
 
 	background-color: #fff; padding: 1em 2em;
-	border-radius: 0.4em; border-bottom: 2px solid $colorGrayLight1;
+	border-bottom: 2px solid $colorGrayLight1;
 
 	> ul { padding: 2.5em 0 1.5em; }
 
@@ -14,6 +14,18 @@
 	ul a {
 
 		display: block; position: relative;	@include imgRatio(5/3);
+
+	}
+
+	@include mediaMinToMaxWidth($breakpointSmall, $breakpointMedium) {
+
+		li { width: percentage(1/4); }
+
+	}
+
+	@include mediaMinWidth($breakpointMedium) {
+
+		border-radius: 0.4em;
 
 	}
 

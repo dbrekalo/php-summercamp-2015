@@ -1,10 +1,12 @@
 .articleType3 {
 
-	display: block; position: relative; padding-left: 35%;
+	$imageSize: 80; $spacing: 15;
+
+	display: block; position: relative; overflow: hidden; padding-left: em($imageSize + $spacing,10);
 
 	> .imageCont {
 
-		position: absolute; left: 0; top: 0; width: 30%;
+		float: left; width: em($imageSize,10); margin-left: em(-$imageSize - $spacing,10);
 
 		> img { display: block; width: 100%; }
 
@@ -12,12 +14,12 @@
 
 	> .title {
 
-		font-size: 1.6em; position: relative; padding-bottom: em(8,16); margin-bottom: em(8,16);
+		font-size: 1.6em; position: relative; padding-bottom: em(10,16); margin-bottom: em(10,16);
 		@include fontSansBold; color: $colorGrayDark1;
 
 		&:after {
 
-			content: ""; position: absolute; left: 0; bottom: 0; width: em(20,16);
+			content: ""; position: absolute; left: 0; bottom: 0; width: em(30,16);
 			border-bottom: 1px solid $colorGrayLight1;
 
 		}

@@ -9,26 +9,4 @@
 @import '../partials/listModuleType2';
 @import '../partials/galleryModuleType1';
 
-
-.homepageLayout {
-
-	.sliderType1 {
-
-		> ul > li { display: none; &:first-child { display: block; } }
-
-	}
-
-	.articleListType1 {
-
-		margin: 3em -1.5em; padding-top: 1.5em; border-top: 1px solid $colorGrayLight1;
-
-		> li {
-			float: left; width: 50%; box-sizing: border-box; padding: 1.5em;
-		}
-
-	}
-
-	.listModuleType1,
-	.galleryModuleType1 { margin-bottom: 3em; }
-
-}
+@import '../partials/articleListType1';

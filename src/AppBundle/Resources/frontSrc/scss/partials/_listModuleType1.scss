@@ -1,16 +1,11 @@
 .listModuleType1 {
 
 	background-color: #fff; padding: 1em 2em;
-	border-radius: 0.4em; border-bottom: 2px solid $colorGrayLight1;
-	counter-reset: section;
-
-	>.titleType1 {
-
-	}
+	border-bottom: 2px solid $colorGrayLight1;
 
 	> ol {
 
-		padding: 2em 0;
+		padding: 2em 0; counter-reset: section;
 
 		> li {
 
@@ -25,6 +20,12 @@
 			}
 
 		}
+
+	}
+
+	@include mediaMinWidth($breakpointMedium) {
+
+		border-radius: 0.4em;
 
 	}
 

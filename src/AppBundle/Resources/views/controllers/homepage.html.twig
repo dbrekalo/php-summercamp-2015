@@ -21,11 +21,12 @@
 	<div class="fitWrap">
 		<a href="/" title="Go to homepage" class="logo iconOctopus icr">I'm neked!</a>
 		<form class="mainSearch" action="search-autocomplete">
-			<input autocomplete="off" class="query" type="text" placeholder="Search for a perfect day to spend a day" name="query" />
+			<input autocomplete="off" class="query" type="text" placeholder="Search for a perfect query" name="query" />
 			<button class="btnSubmit iconSearch icr nBtn" type="submit">Click me hard</button>
 		</form>
 	</div>
 	<nav class="mainNav">
+		<button type="button" class="toggleBtn iconMenu nBtn icr">Toggle nav</button>
 		<div class="fitWrap cf">
 			<ul>
 				<li><a class="selected" href="#">Homepage</a></li>
@@ -43,20 +44,12 @@
 <div class="mainContentArea homepageLayout fitWrap cf">
 	<div class="mainCol">
 
-		<div class="sliderType1">
-			<ul>
-				{% for i in 1..3 %}
-				<li>
-					<a class="articleType1" href="#">
-						<img src="{{ asset('bundles/app/images/articleType1_1.jpg') }}" alt="A Dutch company is  building a $335 million  seawall around New York">
-						<h3 class="title">A Dutch company is  building a $335 million  seawall around New York</h3>
-					</a>
-				</li>
-				{% endfor %}
-			</ul>
-		</div>
+		<a class="articleType1" href="#">
+			<img src="{{ asset('bundles/app/images/articleType1_1.jpg') }}" alt="A Dutch company is  building a $335 million  seawall around New York">
+			<h3 class="title">A Dutch company is  building a $335 million  seawall around New York</h3>
+		</a>
 
-		<ul class="articleListType1 cf">
+		<ul class="articleListType1">
 			{% for i in 1..4 %}
 			<li>
 				<article class="articleType2">
@@ -118,14 +111,14 @@
 		<section class="listModuleType2">
 			<h3 class="titleType1">Featured articles</h3>
 			<ul>
-				{% for i in 1..5 %}
+				{% for i in 1..4 %}
 				<li>
 					<a href="#" class="articleType3">
 						<div class="imageCont">
 							<img src="{{ asset('bundles/app/images/gallery/gallerySmall3.jpg') }}" alt="">
 						</div>
-						<h3 class="title">Item title</h3>
-						<p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+						<h3 class="title">Lorem ipsum dolor sit amet, consectetur</h3>
+						<p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate tenetur libero, accusamus magnam eius pariatur.</p>
 					</a>
 				</li>
 				{% endfor %}

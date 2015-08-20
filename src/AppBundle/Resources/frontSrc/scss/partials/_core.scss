@@ -15,7 +15,13 @@ body {
 
 .fitWrap {
 
-	max-width: 120em; margin: 0 auto; position: relative; box-sizing: border-box;
+	box-sizing: border-box;
+
+	@include mediaMinWidth($breakpointMedium) {
+
+		max-width: 120em; margin: 0 auto;
+
+	}
 
 }
 
@@ -26,19 +32,31 @@ body {
 
 .mainContentArea {
 
-	$gutter: 30; $sidebarSize: 300;
+	@include mediaMaxWidth($breakpointMedium) {
 
-	padding: em($gutter,10);
-
-	> .mainCol {
-
-		float: left; width: 100%; padding-right: em($gutter + $sidebarSize,10); box-sizing: border-box;
+		> .sideCol > section { margin-top: 1em; &:first-child { margin-top: 0; } }
 
 	}
 
-	> .sideCol {
+	@include mediaMinWidth($breakpointMedium) {
 
-		float: left; width: em($sidebarSize,10); margin-left: em(-1*$sidebarSize,10);
+		$gutter: 30; $sidebarSize: 300;
+
+		padding: em($gutter,10);
+
+		> .mainCol {
+
+			float: left; width: 100%; padding-right: em($gutter + $sidebarSize,10); box-sizing: border-box;
+
+		}
+
+		> .sideCol {
+
+			float: left; width: em($sidebarSize,10); margin-left: em(-1*$sidebarSize,10);
+
+			> section { margin-top: 3em; &:first-child { margin-top: 0; } }
+
+		}
 
 	}
 
