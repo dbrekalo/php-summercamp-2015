@@ -35,11 +35,16 @@
 
 		}
 
-		&.active {
+		&.opened {
 
-			bottom: 0; background-color: #FFF; z-index: 100; padding: 3em 2em;
+			bottom: 0; background-color: #fff; z-index: 100; padding: 3em 2em;
+			@include animation(slideDownFadeIn 0.3s ease-out);
 
-			> .fitWrap { display: block; }
+			> .fitWrap {
+
+				display: block;
+
+			}
 
 			> .toggleBtn:before { color: $colorGrayDark2; }
 

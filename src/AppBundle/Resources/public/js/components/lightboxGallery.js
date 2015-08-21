@@ -1,0 +1,1 @@
+app.components.lightboxGallery=app.view.extend({events:{"click .zoomImage":"zoomImage"},zoomImage:function(a){a.preventDefault(),this.$items=this.$items||this.$(".zoomImage"),this.require("simpleLightbox",function(){this.lightbox=this.lightbox||new $.simpleLightbox({$items:this.$items,bindToItems:!1}),this.lightbox.showPosition(this.$items.index($(a.target)))})}});

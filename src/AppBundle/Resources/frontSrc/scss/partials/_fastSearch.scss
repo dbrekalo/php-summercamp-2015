@@ -1,0 +1,26 @@
+.fsResults {
+
+	position: absolute; top: 100%; left: 0; right: 0; z-index: 20;
+	background-color: #FFF; box-shadow: 0 1em 1em rgba(#000, 0.1);
+
+	display: none;
+
+	.fsrOpened & {
+
+		display: block; @include animation(slideDownFadeIn 0.2s);
+
+	}
+
+}
+
+.fsResultItem {
+
+	display: block; font-size: 1.6em; padding: em(15,16) em(20,16);
+	color: $colorGrayDark1; border-top: 1px solid $colorGrayLight1;
+
+	&:first-child { border: 0; }
+
+	&:hover,
+	&.focused { color: $colorMain1; background-color: #F8F8F8; }
+
+}

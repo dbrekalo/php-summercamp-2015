@@ -1,5 +1,15 @@
-app.controllers.homepage = function() {
+app.controllers.homepage = app.controllers.base.extend({
 
-	console.log('homepage');
+	initialize: function() {
 
-};
+		this.bootstrap();
+
+		this.require('app.components.lightboxGallery', function(LightboxGallery) {
+
+			this.sidebarGallery = new LightboxGallery({$el: $('.galleryModuleType1')});
+
+		});
+
+	}
+
+});

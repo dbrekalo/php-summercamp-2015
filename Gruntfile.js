@@ -116,13 +116,20 @@ module.exports = function(grunt) {
 					'<%= settings.frontDistPath %>vendor/whenInViewport/dist/whenInViewport.min.js',
 					'<%= settings.frontDistPath %>vendor/lateImages/dist/lateImages.min.js',
 					'<%= settings.frontDistPath %>vendor/simple-view/dist/simpleView.min.js',
-					'<%= settings.frontDistPath %>js/config.js'
+
+					'<%= settings.frontDistPath %>js/config.js',
+
+					'<%= settings.frontDistPath %>js/components/mainNav.js',
+					'<%= settings.frontDistPath %>js/components/mainSearch.js',
+
+					'<%= settings.frontDistPath %>js/controllers/base.js'
 				],
 				dest: '<%= settings.frontDistPath %>js/builds/global.js'
 			},
 			homepage: {
 				src: [
 					'<%= settings.frontDistPath %>js/builds/global.js',
+					'<%= settings.frontDistPath %>js/components/lightboxGallery.js',
 					'<%= settings.frontDistPath %>js/controllers/homepage.js',
 					'<%= settings.frontDistPath %>js/controllers/initializers/homepage.js'
 				],

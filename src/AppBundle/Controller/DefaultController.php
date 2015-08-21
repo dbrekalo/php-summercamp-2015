@@ -41,13 +41,14 @@ class DefaultController extends Controller
 	}
 
 	/**
-	 * @Route("/search-results", name="searchResults")
+	 * @Route("/quick-search", name="quickSearch")
 	 */
-	public function searchResultsAction(Request $request)
+	public function quickSearchAction(Request $request)
 	{
 		return new JsonResponse([
-			'id' => 1,
-			'title' => 'Test'
+			['label' => $request->get('query') . ' test', 'url' => 'detail'],
+			['label' => $request->get('query') . ' test 2', 'url' => 'detail'],
+			['label' => $request->get('query') . ' test 3', 'url' => 'detail'],
 		]);
 	}
 

@@ -24,6 +24,7 @@
     "whenInViewport": "~1",
     "lateImages": "~1",
     "swipeSlider": "~1",
-    "simple-view": "~1"
+    "simple-view": "~1",
+    "simple-lightbox": "~1.0.11"
   }
 }
