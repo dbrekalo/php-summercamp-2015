@@ -8,16 +8,16 @@ app.components.lightboxGallery = app.view.extend({
 
 		e.preventDefault();
 
-		this.$items = this.$items || this.$('.zoomImage');
-
 		this.require('simpleLightbox', function() {
+
+			this.$items = this.$items || this.$('.zoomImage');
 
 			this.lightbox = this.lightbox || new $.simpleLightbox({
 				$items: this.$items,
 				bindToItems: false
 			});
 
-			this.lightbox.showPosition(this.$items.index($(e.target)));
+			this.lightbox.showPosition(this.$items.index($(e.currentTarget)));
 
 		});
 

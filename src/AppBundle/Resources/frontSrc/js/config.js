@@ -35,7 +35,8 @@ app.repository.config({
 			}
 		},
 		simpleLightbox: {
-			resources: ['vendor/simple-lightbox/dist/simpleLightbox.min.css', 'vendor/simple-lightbox/dist/simpleLightbox.min.js']
+			resources: ['vendor/simple-lightbox/dist/simpleLightbox.min.css', 'vendor/simple-lightbox/dist/simpleLightbox.min.js'],
+			namespace: '$.simpleLightbox',
 		}
 	},
 	baseUrl: '/bundles/app/',
