@@ -6,7 +6,7 @@ app.controllers.homepage = app.controllers.base.extend({
 
 		this.require('app.components.lightboxGallery', function(LightboxGallery) {
 
-			this.sidebarGallery = new LightboxGallery({$el: $('.galleryModuleType1')});
+			this.components.sidebarGallery = new LightboxGallery({$el: $('.galleryModuleType1')});
 
 		});
 

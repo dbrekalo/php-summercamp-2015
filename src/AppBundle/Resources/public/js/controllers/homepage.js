@@ -1,1 +1,1 @@
-app.controllers.homepage=app.controllers.base.extend({initialize:function(){this.bootstrap(),this.require("app.components.lightboxGallery",function(a){this.sidebarGallery=new a({$el:$(".galleryModuleType1")})})}});
+app.controllers.homepage=app.controllers.base.extend({initialize:function(){this.bootstrap(),this.require("app.components.lightboxGallery",function(a){this.components.sidebarGallery=new a({$el:$(".galleryModuleType1")})})}});

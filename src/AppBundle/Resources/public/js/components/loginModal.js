@@ -1,0 +1,1 @@
+app.components.loginModal=app.view.extend({initialize:function(a){a.beforeInit&&a.beforeInit(),$.get("login",function(a){this.$el=$(a),this.delegateEvents(),this.lightbox=$.simpleLightbox.open({content:this.$el,elementClass:"slbContentEl"})}.bind(this))},events:{submit:"submitLogin"},submitLogin:function(a){a.preventDefault(),console.log("post data to server...")}});

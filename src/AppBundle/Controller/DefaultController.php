@@ -45,12 +45,57 @@ class DefaultController extends Controller
 	 */
 	public function quickSearchAction(Request $request)
 	{
+		$query = $request->get('query');
+
 		return new JsonResponse([
-			['label' => $request->get('query') . ' test', 'url' => 'detail'],
-			['label' => $request->get('query') . ' test 2', 'url' => 'detail'],
-			['label' => $request->get('query') . ' test 3', 'url' => 'detail'],
+			['label' => $query . ' test', 'url' => 'detail'],
+			['label' => $query . ' test 2', 'url' => 'detail'],
+			['label' => $query . ' test 3', 'url' => 'detail'],
 		]);
 	}
 
+	/**
+	 * @Route("/login", name="login")
+	 */
+
+	public function loginModalAction(Request $request)
+	{
+		return $this->render('AppBundle:partials:loginModal.html.twig');
+	}
+
+	public function mainNavAction(Request $request)
+	{
+		return $this->render('AppBundle:partials:mainNav.html.twig');
+	}
+
+	public function mainSearchAction(Request $request)
+	{
+		return $this->render('AppBundle:partials:mainSearch.html.twig');
+	}
+
+	public function mainHeaderAction(Request $request)
+	{
+		return $this->render('AppBundle:partials:mainHeader.html.twig');
+	}
+
+	public function mainFooterAction(Request $request)
+	{
+		return $this->render('AppBundle:partials:mainFooter.html.twig');
+	}
+
+	public function topListAction(Request $request)
+	{
+		return $this->render('AppBundle:partials:listModuleType1.html.twig');
+	}
+
+	public function pictureGalleryAction(Request $request)
+	{
+		return $this->render('AppBundle:partials:galleryModuleType1.html.twig');
+	}
+
+	public function featuredArticlesAction(Request $request)
+	{
+		return $this->render('AppBundle:partials:listModuleType2.html.twig');
+	}
 
 }

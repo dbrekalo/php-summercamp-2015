@@ -10,9 +10,7 @@ app.components.mainSearch = app.view.extend({
 
 		return this.require('fastsearch', function() {
 
-			this.fastSearch = this.fastSearch || this.$input.fastsearch({
-
-			}).data('fastsearch');
+			this.fastSearch = this.fastSearch || new $.fastsearch(this.$input);
 
 		});
 

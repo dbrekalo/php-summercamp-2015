@@ -29,3 +29,11 @@
 
 }
 
+@mixin btnType2 {
+
+	font-size: 1.4em; display: inline-block; padding: em(12,14) em(20,14);
+	color: #fff; text-transform: uppercase; background-color: $colorMain1;
+	@include fontSansBold; text-align: center; letter-spacing: 0.05em;
+
+}
+

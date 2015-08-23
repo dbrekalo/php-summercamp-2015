@@ -36,7 +36,11 @@ app.repository.config({
 		},
 		simpleLightbox: {
 			resources: ['vendor/simple-lightbox/dist/simpleLightbox.min.css', 'vendor/simple-lightbox/dist/simpleLightbox.min.js'],
-			namespace: '$.simpleLightbox',
+			namespace: '$.simpleLightbox'
+		},
+		'app.components.loginModal': {
+			resources: ['css/components/loginModal.css', 'js/components/loginModal.js'],
+			dependencies: 'simpleLightbox'
 		}
 	},
 	baseUrl: '/bundles/app/',
