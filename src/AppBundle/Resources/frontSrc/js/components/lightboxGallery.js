@@ -21,6 +21,12 @@ app.components.lightboxGallery = app.view.extend({
 
 		});
 
+	},
+
+	beforeClose: function() {
+
+		this.lightbox && this.lightbox.destroy();
+
 	}
 
 });

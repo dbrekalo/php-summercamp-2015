@@ -1,6 +1,11 @@
 app.controllers.base = app.view.extend({
 
-	components: {},
+	constructor: function() {
+
+		this.components = {};
+		app.view.apply(this, arguments);
+
+	},
 
 	bootstrap: function() {
 
@@ -37,6 +42,16 @@ app.controllers.base = app.view.extend({
 			new LoginModal({
 				beforeInit: this.components.mainNav.close.bind(this.components.mainNav)
 			});
+
+		});
+
+	},
+
+	beforeClose: function() {
+
+		$.each(this.components, function(key, component) {
+
+			component.close();
 
 		});
 

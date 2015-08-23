@@ -60,4 +60,10 @@ body {
 
 	}
 
+ 	.appModeOn & {
+
+		@include animation(slideDownFadeIn 0.5s);
+
+ 	}
+
 }

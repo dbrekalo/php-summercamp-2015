@@ -47,8 +47,21 @@ app.repository.config({
 	resolveFileByNamespace: function(namespace) {
 
 		var namespaceParts = namespace.split('.');
+
 		if (namespaceParts[0] !== 'app') { return false; }
-		return 'js/' + namespaceParts.slice(1).join('/') + '.js';
+
+		if (namespaceParts[1] === 'controllers') {
+
+			return [
+				'css/' + namespaceParts.slice(1).join('/') + '.css',
+				'js/' + namespaceParts.slice(1).join('/') + '.js'
+			];
+
+		} else {
+
+			return 'js/' + namespaceParts.slice(1).join('/') + '.js';
+
+		}
 
 	},
 	loadSufix: '?v=' + new Date().getTime()

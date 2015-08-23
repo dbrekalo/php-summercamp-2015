@@ -22,11 +22,19 @@ class DefaultController extends Controller
 			'noLayout' => $request->isXmlHttpRequest()
 		]);
 
-		return $request->isXmlHttpRequest() ? new JsonResponse([
-			'pageTitle' => $pageTitle,
-			'html' => $html,
-			'pageType' => 'homepage'
-		]) : new Response($html);
+		if ($request->isXmlHttpRequest()) {
+
+			return new JsonResponse([
+				'pageTitle' => $pageTitle,
+				'html' => $html,
+				'pageType' => 'homepage'
+			]);
+
+		} else {
+
+			return new Response($html);
+
+		}
 	}
 
 	/**
@@ -34,10 +42,26 @@ class DefaultController extends Controller
 	 */
 	public function detailAction(Request $request)
 	{
-		return $this->render('AppBundle:controllers:detail.html.twig', [
-			'title' => 'Detail summercamp frontend',
-			'noLayout' => false
+		$pageTitle = 'Detail summercamp frontend';
+
+		$html = $this->get('templating')->render('AppBundle:controllers:detail.html.twig', [
+			'title' => $pageTitle,
+			'noLayout' => $request->isXmlHttpRequest()
 		]);
+
+		if ($request->isXmlHttpRequest()) {
+
+			return new JsonResponse([
+				'pageTitle' => $pageTitle,
+				'html' => $html,
+				'pageType' => 'detail'
+			]);
+
+		} else {
+
+			return new Response($html);
+
+		}
 	}
 
 	/**

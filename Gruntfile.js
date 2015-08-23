@@ -122,7 +122,8 @@ module.exports = function(grunt) {
 					'<%= settings.frontDistPath %>js/components/mainNav.js',
 					'<%= settings.frontDistPath %>js/components/mainSearch.js',
 
-					'<%= settings.frontDistPath %>js/controllers/base.js'
+					'<%= settings.frontDistPath %>js/controllers/base.js',
+					'<%= settings.frontDistPath %>js/router.js'
 				],
 				dest: '<%= settings.frontDistPath %>js/builds/global.js'
 			},

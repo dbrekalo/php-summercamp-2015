@@ -14,6 +14,13 @@ app.components.mainSearch = app.view.extend({
 
 		});
 
+	},
+
+	beforeClose: function() {
+
+		this.fastSearch && this.fastSearch.destroy();
+		console.log('closing');
+
 	}
 
 });
