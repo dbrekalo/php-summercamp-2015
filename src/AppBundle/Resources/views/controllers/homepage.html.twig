@@ -1,6 +1,7 @@
 {% extends (noLayout is defined and noLayout == true) ? "AppBundle:layouts:noLayout.html.twig" : "AppBundle:layouts:main.html.twig" %}
 
 {% block stylesheets %}{% stylesheets
+	'bundles/app/css/controllers/globalStyles.css'
 	'bundles/app/css/controllers/homepage.css'
 %}
     <link href="{{ asset_url }}" rel="stylesheet" type="text/css" />
@@ -22,7 +23,7 @@
 <div class="mainContentArea homepageLayout fitWrap cf">
 	<div class="mainCol">
 
-		<a class="articleType1" href="#">
+		<a class="articleType1" href="{{ path('detail') }}">
 			<img src="{{ asset('bundles/app/images/articleType1_1.jpg') }}" alt="A Dutch company is  building a $335 million  seawall around New York">
 			<h3 class="title">A Dutch company is  building a $335 million  seawall around New York</h3>
 		</a>
@@ -31,10 +32,10 @@
 			{% for i in 1..4 %}
 			<li>
 				<article class="articleType2">
-					<a href="#" class="imageCont">
+					<a href="{{ path('detail') }}" class="imageCont">
 						<img src="{{ asset('bundles/app/images/articleType2_1.jpg') }}" alt="">
 					</a>
-					<h3 class="title"><a href="#">A Dutch company is  building a $335 million  seawall around New York</a></h3>
+					<h3 class="title"><a href="{{ path('detail') }}">A Dutch company is  building a $335 million  seawall around New York</a></h3>
 					<p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, alias non ad autem repellat, fugiat soluta quisquam, quae laudantium cumque inventore libero aliquam. Perferendis quod veritatis officiis in similique corporis.</p>
 					<ul class="controls">
 						<li><a class="iconHeart" href="#"><strong>300</strong> likes</a></li>

@@ -134,6 +134,14 @@ module.exports = function(grunt) {
 					'<%= settings.frontDistPath %>js/controllers/initializers/homepage.js'
 				],
 				dest: '<%= settings.frontDistPath %>js/builds/homepage.js'
+			},
+			detail: {
+				src: [
+					'<%= settings.frontDistPath %>js/builds/global.js',
+					'<%= settings.frontDistPath %>js/controllers/detail.js',
+					'<%= settings.frontDistPath %>js/controllers/initializers/detail.js'
+				],
+				dest: '<%= settings.frontDistPath %>js/builds/detail.js'
 			}
 		},
 
