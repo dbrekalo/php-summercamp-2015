@@ -40,7 +40,7 @@ app.controllers.base = app.view.extend({
 		this.require('app.components.loginModal', function(LoginModal) {
 
 			new LoginModal({
-				beforeInit: this.components.mainNav.close.bind(this.components.mainNav)
+				beforeInit: this.components.mainNav.hide.bind(this.components.mainNav)
 			});
 
 		});

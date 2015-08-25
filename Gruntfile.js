@@ -86,7 +86,7 @@ module.exports = function(grunt) {
 			frontJs: {
 				expand: true,
 				files: ['<%= settings.frontSrcPath %>js/**/*.js', 'Gruntfile.js'],
-				tasks: ['jshint', 'jscs', 'uglify', 'concat'],
+				tasks: ['uglify', 'concat', 'jshint', 'jscs'],
 				options: {
 					spawn: false
 				}
@@ -143,6 +143,22 @@ module.exports = function(grunt) {
 					'<%= settings.frontDistPath %>js/controllers/initializers/detail.js'
 				],
 				dest: '<%= settings.frontDistPath %>js/builds/detail.js'
+			},
+			playground: {
+				src: [
+					'<%= settings.frontDistPath %>vendor/jquery/dist/jquery.min.js',
+					'<%= settings.frontDistPath %>vendor/simpleloader/dist/simpleloader.min.js',
+					'<%= settings.frontDistPath %>vendor/repository/dist/repository.min.js',
+					'<%= settings.frontDistPath %>vendor/whenInViewport/dist/whenInViewport.min.js',
+					'<%= settings.frontDistPath %>vendor/lateImages/dist/lateImages.min.js',
+					'<%= settings.frontDistPath %>vendor/simple-view/dist/simpleView.min.js',
+					'<%= settings.frontDistPath %>vendor/fastsearch/dist/fastsearch.min.js',
+					'<%= settings.frontDistPath %>vendor/simple-lightbox/dist/simpleLightbox.min.js',
+
+					'<%= settings.frontDistPath %>js/config.js',
+					'<%= settings.frontDistPath %>js/playground.js'
+				],
+				dest: '<%= settings.frontDistPath %>js/builds/playground.js'
 			}
 		},
 
@@ -158,6 +174,6 @@ module.exports = function(grunt) {
 	require('load-grunt-tasks')(grunt);
 
 	grunt.registerTask('default', ['concurrent']);
-	grunt.registerTask('build', ['sass', 'jshint', 'jscs', 'uglify', 'concat', 'imagemin']);
+	grunt.registerTask('build', ['uglify', 'concat', 'jshint', 'jscs', 'imagemin', 'sass']);
 
 };

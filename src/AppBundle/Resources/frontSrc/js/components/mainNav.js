@@ -2,17 +2,17 @@ app.components.mainNav = app.view.extend({
 
 	events: {
 		'click .toggleBtn': function() {
-			this.$el.hasClass('opened') ? this.close() : this.open();
+			this.$el.hasClass('opened') ? this.hide() : this.show();
 		}
 	},
 
-	open: function() {
+	show: function() {
 
 		this.$el.addClass('opened');
 
 	},
 
-	close: function() {
+	hide: function() {
 
 		this.$el.removeClass('opened');
 

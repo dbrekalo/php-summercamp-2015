@@ -7,7 +7,6 @@ app.components.loginModal = app.view.extend({
 		$.get('login', function(html) {
 
 			this.$el = $(html);
-			this.delegateEvents();
 
 			this.lightbox = $.simpleLightbox.open({
 				content: this.$el,
@@ -18,15 +17,9 @@ app.components.loginModal = app.view.extend({
 
 	},
 
-	events: {
-		submit: 'submitLogin'
-	},
+	beforeClose: function() {
 
-	submitLogin: function(e) {
-
-		e.preventDefault();
-
-		console.log('post data to server...');
+		this.lightbox && this.lightbox.destroy();
 
 	}
 

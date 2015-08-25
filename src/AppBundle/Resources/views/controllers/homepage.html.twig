@@ -2,7 +2,7 @@
 
 {% block stylesheets %}{% stylesheets
 	'bundles/app/css/controllers/globalStyles.css'
-	'bundles/app/css/controllers/homepage.css'
+	'bundles/app/css/controllers/playground.css'
 %}
     <link href="{{ asset_url }}" rel="stylesheet" type="text/css" />
     {% endstylesheets %}
@@ -10,7 +10,7 @@
 
 {% block javascripts %}
     {% javascripts
-        'bundles/app/js/builds/homepage.js'
+        'bundles/app/js/builds/playground.js'
     %}
     <script async src="{{ asset_url }}"></script>
     {% endjavascripts %}
@@ -61,5 +61,7 @@
 </div>
 
 {{ render(controller('AppBundle:Default:mainFooter')) }}
+
+{{ render(controller('AppBundle:Default:loginModal')) }}
 
 {% endblock %}
