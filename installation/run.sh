@@ -1,6 +1,7 @@
 #!/bin/bash
 composer install
 ./app/console assets:install --symlink
+./app/console assetic:dump --env=prod
 
-npm install
+sudo npm install
 bower install
